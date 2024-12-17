@@ -1,0 +1,23 @@
+type Book{
+titre:String
+    publisher :String
+    datePublication:String
+    price:Float
+    resume:String
+
+
+}
+type Mutation{
+    saveBook(book:BookRequest):Book
+}
+type Query{
+    getBookByTitle(title:String):[Book]
+}
+
+input BookRequest{
+    titre:String
+    publisher :String
+    datePublication:String
+    price:Float
+    resume:String
+}
